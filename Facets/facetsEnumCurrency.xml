@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="restrictedTitle">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="25"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="bookstore">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="location" type="xs:string"/>
+                <xs:element name="openFrom" type="xs:date"/>
+                <xs:element name="books">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="book" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="title">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="restrictedTitle">
+                                                  <xs:attribute name="language" type="xs:string"
+                                                  use="required"/>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="inStock" type="xs:boolean" default="true"/>
+                                        <xs:element name="stock">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:int">
+                                                  <xs:maxInclusive value="1000"/>
+                                                  <xs:minInclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="price" type="xs:decimal"/>
+                                        <xs:element name="lastSale" type="xs:dateTime"/>
+                                        <xs:element name="currency">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="USD"/>
+                                                    <xs:enumeration value="EUR"/>
+                                                    <xs:enumeration value="CZK"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
