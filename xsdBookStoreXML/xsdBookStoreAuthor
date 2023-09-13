@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="bookstoreSchema.xsd">
+    <location>Praha</location>
+    <openFrom>2023-09-13</openFrom>
+    <books>
+        <book>
+            <title language="en">To Kill a Mockingbird</title>
+            <inStock/>
+            <stock>10</stock>
+            <price>19.99</price>
+            <lastSale>2023-09-08T15:32:12</lastSale>
+            <currency>CZK</currency>
+            <author>
+                <name>Harper Lee</name>
+                <birthDate>1926-04-28</birthDate>
+            </author>
+        </book>
+        <book>
+            <title language="en">1984</title>
+            <inStock>false</inStock>
+            <stock>0</stock>
+            <price>24.99</price>
+            <lastSale>2023-08-22T11:45:00</lastSale>
+            <currency>CZK</currency>
+            <author>
+                <name>George Orwell</name>
+                <birthDate>1903-06-25</birthDate>
+            </author>
+        </book>
+        <book>
+            <title language="en">The Great Gatsby</title>
+            <inStock>true</inStock>
+            <stock>5</stock>
+            <price>14.99</price>
+            <lastSale>2023-09-01T10:30:00</lastSale>
+            <currency>CZK</currency>
+            <author>
+                <name>F. Scott Fitzgerald</name>
+                <birthDate>1896-09-24</birthDate>
+            </author>
+        </book>
+    </books>
+</bookstore>
