@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="bookstoreSchema.xsd">
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bookstoreSchema.xsd">
     <location>Praha</location>
     <openFrom>2023-09-13</openFrom>
     <books>
         <book>
             <title language="en">To Kill a Mockingbird</title>
-            <inStock/>
-            <stock>10</stock>
+            <inStock>true</inStock> 
             <price>19.99</price>
-            <lastSale>2023-09-08T15:32:12</lastSale>
+            <stock unit="pieces">10</stock> 
             <currency>CZK</currency>
             <author>
                 <name>Harper Lee</name>
@@ -18,10 +16,9 @@
         </book>
         <book>
             <title language="en">1984</title>
-            <inStock>false</inStock>
-            <stock>0</stock>
-            <price>24.99</price>
+            <outOfStock>true</outOfStock> 
             <lastSale>2023-08-22T11:45:00</lastSale>
+            <stock unit="pieces">0</stock> 
             <currency>CZK</currency>
             <author>
                 <name>George Orwell</name>
@@ -30,10 +27,9 @@
         </book>
         <book>
             <title language="en">The Great Gatsby</title>
-            <inStock>true</inStock>
-            <stock>5</stock>
+            <inStock>true</inStock> 
             <price>14.99</price>
-            <lastSale>2023-09-01T10:30:00</lastSale>
+            <stock unit="pieces">5</stock> 
             <currency>CZK</currency>
             <author>
                 <name>F. Scott Fitzgerald</name>
